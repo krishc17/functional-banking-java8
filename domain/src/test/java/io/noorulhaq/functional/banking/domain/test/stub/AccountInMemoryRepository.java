@@ -12,7 +12,7 @@ import java.util.Map;
  */
 public class AccountInMemoryRepository extends AccountRepository {
 
-    private Map<String, Account> accountStore = new HashMap();
+    private static Map<String, Account> accountStore = new HashMap();
 
     public Try<Option<Account>> query(String no) {
         return Try.of(() -> Option.of(accountStore.get(no)));
@@ -24,5 +24,9 @@ public class AccountInMemoryRepository extends AccountRepository {
             accountStore.put(account.no(), account);
             return  accountStore.get(account.no());
         });
+    }
+
+    public void flush(){
+        accountStore.clear();
     }
 }

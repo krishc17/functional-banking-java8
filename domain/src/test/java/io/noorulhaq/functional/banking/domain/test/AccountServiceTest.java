@@ -1,7 +1,6 @@
 package io.noorulhaq.functional.banking.domain.test;
 
 
-import io.noorulhaq.functional.banking.domain.algebra.AccountRepository;
 import io.noorulhaq.functional.banking.domain.interpreter.AccountServiceInterpreter;
 import io.noorulhaq.functional.banking.domain.model.test.Account;
 import io.noorulhaq.functional.banking.domain.model.test.Amounts;
@@ -9,6 +8,7 @@ import io.noorulhaq.functional.banking.domain.test.stub.AccountInMemoryRepositor
 import javaslang.control.Try;
 import javaslang.test.Arbitrary;
 import javaslang.test.Property;
+import org.junit.After;
 import org.junit.Test;
 import static javaslang.API.$;
 import static javaslang.API.Case;
@@ -22,11 +22,10 @@ import static io.noorulhaq.functional.banking.domain.test.Generators.*;
 public class AccountServiceTest {
 
     private AccountServiceInterpreter accountService = new AccountServiceInterpreter();
+    private AccountInMemoryRepository repository = new AccountInMemoryRepository();
 
     @Test
     public void equalDebitAndCredit() {
-
-        AccountRepository repository = new AccountInMemoryRepository();
 
         Property.def("Equal credit & debit in sequence retain the same balance")
                 .forAll(ARBITRARY_ACCOUNTS.apply(1000, repository, accountService), ARBITRARY_AMOUNTS)
@@ -42,8 +41,6 @@ public class AccountServiceTest {
     @Test
     public void balancedLedgerAfterTransfer() {
 
-        AccountRepository repository = new AccountInMemoryRepository();
-
         Arbitrary<Try<Account>> arbitraryAcc1 = ARBITRARY_ACCOUNTS.apply(1000, repository, accountService);
         Arbitrary<Try<Account>> arbitraryAcc2 = ARBITRARY_ACCOUNTS.apply(2000, repository, accountService);
 
@@ -58,5 +55,10 @@ public class AccountServiceTest {
                                 Case($(), () -> false)))
                 .check()
                 .assertIsSatisfied();
+    }
+
+    @After
+    public void tearDown(){
+        repository.flush();
     }
 }
