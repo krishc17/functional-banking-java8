@@ -17,7 +17,7 @@ import static javaslang.Patterns.*;
 import static io.noorulhaq.functional.banking.domain.test.Generators.*;
 
 /**
- * Unit test for simple App.
+ * Created by Noor on 1/18/17.
  */
 public class AccountServiceTest {
 
