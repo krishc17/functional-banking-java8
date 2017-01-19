@@ -30,7 +30,15 @@ public class AccountServiceInterpreter extends AccountService<Account, Balance, 
 
     @Override
     public Reader<AccountRepository, Try<Option<Account>>> close(String no, Option<DateTime> closeDate) {
-        return null;
+        return new Reader<>((repo) -> Match(repo.query(no)).of(
+                Case(Success(None()), () -> Try.failure(new RuntimeException(format("No account found with account number %s.", no)))),
+                Case(Failure($()), ex -> Try.failure(new RuntimeException(format("Unable to close the account %s", no), ex))),
+                Case(Success(Some($())), (acc) -> {
+                    if(closeDate.getOrElse(DateTime.now()).isBefore(acc.get().dateOfOpening()))
+                        return Try.<Option<Account>>failure(new RuntimeException(format("Date of closing cannot be before date of opening")));
+                    else
+                        return repo.store(acc.get().close(closeDate)).flatMap(account -> Try.of(()->Option.of(account)));
+                })));
     }
 
     @Override

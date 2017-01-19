@@ -52,6 +52,18 @@ public abstract class Account {
         return setBalance0(Balance.balance(getAmount(balance()).add(amount))).apply(this);
     }
 
+    public final DateTime dateOfOpening(){
+        return getDateOfOpening(this);
+    }
+
+    public final Account close(Option<DateTime> dateOfClosing){
+        return setDateOfClosing0(dateOfClosing).apply(this);
+    }
+
+    public final Option<DateTime> dateOfClosing(){
+        return getDateOfClosing(this);
+    }
+
     public final String no() {
         return getNo(this);
     }
