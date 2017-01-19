@@ -1,6 +1,5 @@
 package io.noorulhaq.functional.banking.domain.test;
 
-
 import io.noorulhaq.functional.banking.domain.interpreter.AccountServiceInterpreter;
 import io.noorulhaq.functional.banking.domain.model.test.Account;
 import io.noorulhaq.functional.banking.domain.model.test.Amounts;

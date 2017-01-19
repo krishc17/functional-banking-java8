@@ -24,9 +24,4 @@ public interface Generators {
             ((seed,accountRepository, accountServiceInterpreter) ->
                     Gen.of(seed,(last)->last+1).map((id)->  accountServiceInterpreter.open("Account#"+id,"Random Account#"+id, Option.none())
                             .apply(accountRepository) ).arbitrary());
-
-
-
-
-
 }
