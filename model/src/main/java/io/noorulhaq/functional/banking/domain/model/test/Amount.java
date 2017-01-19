@@ -18,7 +18,7 @@ public abstract class Amount {
     }
 
     @ExportAsPublic
-    static Amount amount() {
+    static Amount zero() {
         return Amounts.Amount0(new BigDecimal(0));
     }
 

@@ -47,12 +47,13 @@ public class AccountServiceTest {
         Property.def("Ledger should be balanced after amount transfer")
                 .forAll(arbitraryAcc1, arbitraryAcc2, ARBITRARY_AMOUNTS)
                 .suchThat((debitAccount, creditAccount, amount) ->
-                        Match(accountService.credit(debitAccount.get().no(), amount)
-                                .flatMap((a) -> accountService.transfer(debitAccount.get().no(), creditAccount.get().no(), amount)).apply(repository)).of(
-                                Case(Success(Some($())), (accounts) ->
-                                        accounts.get()._1.balance().amount().equals(Amounts.amount())
-                                                && accounts.get()._2.balance().amount().equals(amount)),
-                                Case($(), () -> false)))
+                        accountService.credit(debitAccount.get().no(), amount)
+                                .flatMap((a) -> accountService.transfer(debitAccount.get().no(), creditAccount.get().no(), amount)).apply(repository)
+                                .transform((accts)-> Match(accts).of(
+                                        Case(Success(Some($())),
+                                                (accounts) -> accounts.get()._1.balance().amount().equals(Amounts.zero())
+                                                        && accounts.get()._2.balance().amount().equals(amount)),
+                                        Case($(), () -> false))))
                 .check()
                 .assertIsSatisfied();
     }
