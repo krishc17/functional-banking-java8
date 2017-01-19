@@ -1,8 +1,7 @@
 package io.noorulhaq.functional.banking.domain.algebra;
 
 import io.noorulhaq.functional.util.Reader;
-import javaslang.Tuple;
-import javaslang.Tuple2;
+import javaslang.*;
 import javaslang.control.Option;
 import javaslang.control.Try;
 import org.joda.time.DateTime;

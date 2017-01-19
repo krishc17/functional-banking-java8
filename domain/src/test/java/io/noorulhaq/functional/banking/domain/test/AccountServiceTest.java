@@ -27,6 +27,8 @@ public class AccountServiceTest {
     @Test
     public void equalDebitAndCredit() {
 
+        ARBITRARY_ACCOUNTS.andThen((o)->ARBITRARY_ACCOUNTS).apply(1,repository,accountService);
+
         Property.def("Equal credit & debit in sequence retain the same balance")
                 .forAll(ARBITRARY_ACCOUNTS.apply(1000, repository, accountService), ARBITRARY_AMOUNTS)
                 .suchThat((account, amount) -> accountService.balance(account.get().no()).apply(repository)
