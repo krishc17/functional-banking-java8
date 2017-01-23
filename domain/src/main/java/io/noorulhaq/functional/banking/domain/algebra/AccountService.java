@@ -11,17 +11,17 @@ import org.joda.time.DateTime;
  */
 public abstract class AccountService<Account,Balance,Amount> {
 
-    public abstract Reader<AccountRepository, Try<Account>> open(String no, String name, Option<DateTime> openDate);
+    public abstract AccountOperation<Account> open(String no, String name, Option<DateTime> openDate);
 
-    public abstract Reader<AccountRepository, Try<Option<Account>>> close(String no, Option<DateTime> closeDate);
+    public abstract AccountOperation<Option<Account>> close(String no, Option<DateTime> closeDate);
 
-    public abstract Reader<AccountRepository, Try<Option<Account>>> debit(String no, Amount amount);
+    public abstract AccountOperation<Option<Account>> debit(String no, Amount amount);
 
-    public abstract Reader<AccountRepository, Try<Option<Account>>> credit(String no, Amount amount);
+    public abstract AccountOperation<Option<Account>> credit(String no, Amount amount);
 
-    public abstract Reader<AccountRepository, Try<Option<Balance>>> balance(String no);
+    public abstract AccountOperation<Option<Balance>> balance(String no);
 
-    public Reader<AccountRepository, Try<Option<Tuple2<Account, Account>>>> transfer(String from, String to, Amount amount) {
+    public AccountOperation<Option<Tuple2<Account, Account>>> transfer(String from, String to, Amount amount) {
 
        return  debit(from,amount)
                 .flatMap(tDebitAcc -> credit(to,amount)

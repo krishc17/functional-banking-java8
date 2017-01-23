@@ -1,11 +1,10 @@
-package io.noorulhaq.functional.banking.domain.model.test;
+package io.noorulhaq.functional.banking.domain.model;
 
 /**
  * Created by Noor on 1/17/17.
  */
 import java.util.function.Function;
 import org.derive4j.Data;
-import static io.noorulhaq.functional.banking.domain.model.test.Expressions.*;
 
 @Data
 public abstract class Expression {
@@ -33,7 +32,7 @@ public abstract class Expression {
     }
 
     public static void main(String[] args) {
-        Expression expr = Add(Const(1), Mult(Const(2), Mult(Const(3), Const(3))));
+        Expression expr = Expressions.Add(Expressions.Const(1), Expressions.Mult(Expressions.Const(2), Expressions.Mult(Expressions.Const(3), Expressions.Const(3))));
         System.out.println(eval(expr)); // (1+(2*(3*3))) = 19
     }
 }

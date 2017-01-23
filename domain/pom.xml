@@ -54,7 +54,7 @@
                 <version>1.5</version>
                 <executions>
                     <execution>
-                        <phase>initialize</phase>
+                        <phase>prepare-package</phase>
                         <goals>
                             <goal>execute</goal>
                         </goals>
@@ -84,7 +84,7 @@
                 <version>3.9.0</version>
                 <executions>
                     <execution>
-                        <phase>generate-test-sources</phase>
+                        <phase>generate-sources</phase>
                         <goals>
                             <goal>generate</goal>
                         </goals>
@@ -101,8 +101,8 @@
                                     <inputSchema>BANKING</inputSchema>
                                 </database>
                                 <target>
-                                    <packageName>io.noorulhaq.functional.banking.domain.test.model</packageName>
-                                    <directory>src/test/java</directory>
+                                    <packageName>io.noorulhaq.functional.banking.domain.model.jooq</packageName>
+                                    <directory>src/main/java</directory>
                                 </target>
                             </generator>
                         </configuration>

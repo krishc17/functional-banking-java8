@@ -13,12 +13,16 @@ public class Reader<R, A> {
         this.run = run;
     }
 
-    public <B> Reader<R, B> map(Function<A, B> f) {
-        return new Reader<>(r -> f.apply((apply(r))));
+    public <B, RD extends Reader<R, B>> RD map(Function<A, B> f) {
+        return reader(r -> f.apply((apply((R)r))));
     }
 
-    public <B> Reader<R, B> flatMap(Function<A, Reader<R, B>> f) {
-        return new Reader<>(r -> f.apply(apply(r)).apply(r));
+    public  <B, RD extends Reader<R, B>> RD  flatMap(Function<A, Reader<R, B>> f) {
+        return reader(r -> f.apply(apply(r)).apply(r));
+    }
+
+    protected <B, RD extends Reader<R, B>> RD reader(Function<R, B> f) {
+        return (RD)new Reader<>(f);
     }
 
     public A apply(R r) {

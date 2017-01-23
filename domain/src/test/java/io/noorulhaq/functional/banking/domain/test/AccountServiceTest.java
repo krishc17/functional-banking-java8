@@ -1,8 +1,8 @@
 package io.noorulhaq.functional.banking.domain.test;
 
 import io.noorulhaq.functional.banking.domain.interpreter.AccountServiceInterpreter;
-import io.noorulhaq.functional.banking.domain.model.test.Account;
-import io.noorulhaq.functional.banking.domain.model.test.Amounts;
+import io.noorulhaq.functional.banking.domain.model.Account;
+import io.noorulhaq.functional.banking.domain.model.Amounts;
 import io.noorulhaq.functional.banking.domain.test.stub.AccountInMemoryRepository;
 import javaslang.control.Try;
 import javaslang.test.Arbitrary;

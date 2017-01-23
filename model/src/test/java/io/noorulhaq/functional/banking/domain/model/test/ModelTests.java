@@ -5,11 +5,12 @@ package io.noorulhaq.functional.banking.domain.model.test;
  * Created by Noor on 1/17/17.
  */
 
+import io.noorulhaq.functional.banking.domain.model.Accounts;
+import io.noorulhaq.functional.banking.domain.model.Balances;
 import javaslang.control.Option;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import static io.noorulhaq.functional.banking.domain.model.test.Amounts.*;
-import static io.noorulhaq.functional.banking.domain.model.test.Balances.*;
+import static io.noorulhaq.functional.banking.domain.model.Amounts.*;
 
 public class ModelTests {
 
@@ -29,8 +30,8 @@ public class ModelTests {
 
     @Test
     public void balanceCreation(){
-       assertTrue(balance().value()==0d);
-        assertTrue(balance(amount(10d)).value()==10d);
+       assertTrue(Balances.balance().value()==0d);
+        assertTrue(Balances.balance(amount(10d)).value()==10d);
     }
 
     @Test
@@ -38,6 +39,6 @@ public class ModelTests {
         assertTrue(Accounts.account(null,"b", Option.none()).isFailure());
         assertTrue(Accounts.account("a","b",Option.none()).isSuccess());
         assertTrue(Accounts.account("a","b",Option.none()).get().isZeroBalance());
-        assertTrue(Accounts.account("a","b",Option.none()).get().withBalance(balance(amount(10d))).balance().value()==10d);
+        assertTrue(Accounts.account("a","b",Option.none()).get().withBalance(Balances.balance(amount(10d))).balance().value()==10d);
     }
 }

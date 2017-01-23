@@ -1,7 +1,7 @@
 package io.noorulhaq.functional.banking.domain.test.stub;
 
 import io.noorulhaq.functional.banking.domain.algebra.AccountRepository;
-import io.noorulhaq.functional.banking.domain.model.test.Account;
+import io.noorulhaq.functional.banking.domain.model.Account;
 import javaslang.control.Option;
 import javaslang.control.Try;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package io.noorulhaq.functional.banking.domain.model.test;
+package io.noorulhaq.functional.banking.domain.model;
 
 
 import org.derive4j.*;
