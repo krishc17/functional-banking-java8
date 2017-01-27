@@ -11,6 +11,10 @@ import java.util.function.Function;
 @Data(value = @Derive(withVisibility = Visibility.Smart), flavour = Flavour.Javaslang)
 public abstract class Amount {
 
+    @ExportAsPublic
+    static Amount amount(BigDecimal value) {
+        return Amounts.Amount0(value==null?new BigDecimal(0d):value);
+    }
 
     @ExportAsPublic
     static Amount amount(Double value) {

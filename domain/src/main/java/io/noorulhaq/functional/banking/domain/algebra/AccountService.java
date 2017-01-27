@@ -1,27 +1,29 @@
 package io.noorulhaq.functional.banking.domain.algebra;
 
-import io.noorulhaq.functional.util.Reader;
 import javaslang.*;
 import javaslang.control.Option;
-import javaslang.control.Try;
 import org.joda.time.DateTime;
 
 /**
  * Created by Noor on 1/14/17.
  */
-public abstract class AccountService<Account,Balance,Amount> {
+public interface AccountService<Account,Balance,Amount> {
 
-    public abstract AccountOperation<Account> open(String no, String name, Option<DateTime> openDate);
+    AccountOperation<Account> open(String no, String name, Option<DateTime> openDate);
 
-    public abstract AccountOperation<Option<Account>> close(String no, Option<DateTime> closeDate);
+    AccountOperation<Option<Account>> close(String no, Option<DateTime> closeDate);
 
-    public abstract AccountOperation<Option<Account>> debit(String no, Amount amount);
+    AccountOperation<Option<Account>> debit(String no, Amount amount);
 
-    public abstract AccountOperation<Option<Account>> credit(String no, Amount amount);
+    AccountOperation<Option<Account>> credit(String no, Amount amount);
 
-    public abstract AccountOperation<Option<Balance>> balance(String no);
+    AccountOperation<Option<Balance>> balance(String no);
 
-    public AccountOperation<Option<Tuple2<Account, Account>>> transfer(String from, String to, Amount amount) {
+    default AccountOperation<Option<Tuple2<Account, Account>>> transfer(String from, String to, Amount amount) {
+
+        debit(from,amount)
+                .flatMap(tDebitAcc -> credit(to,amount));
+
 
        return  debit(from,amount)
                 .flatMap(tDebitAcc -> credit(to,amount)

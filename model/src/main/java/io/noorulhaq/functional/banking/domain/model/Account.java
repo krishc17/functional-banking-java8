@@ -43,12 +43,8 @@ public abstract class Account {
         return close(dateOfClosing);
     }
 
-    public final Account debit(Amount amount){
-        return Accounts.setBalance0(Balance.balance(Balances.getAmount(balance()).subtract(amount))).apply(this);
-    }
-
-    public final Account credit(Amount amount){
-        return Accounts.setBalance0(Balance.balance(Balances.getAmount(balance()).add(amount))).apply(this);
+    public final Amount balanceAmount(){
+        return  balance().amount();
     }
 
     public final DateTime dateOfOpening(){

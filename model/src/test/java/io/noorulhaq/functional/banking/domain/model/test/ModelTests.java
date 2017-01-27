@@ -17,7 +17,6 @@ public class ModelTests {
     @Test
     public void amountCreation(){
       assertTrue(amount(10d).value()==10d);
-      assertTrue(amount(null).value()==0);
     }
 
     @Test

@@ -8,6 +8,7 @@ import io.noorulhaq.functional.banking.domain.model.jooq.Banking;
 import io.noorulhaq.functional.banking.domain.model.jooq.Keys;
 import io.noorulhaq.functional.banking.domain.model.jooq.tables.records.AccountsRecord;
 
+import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.Arrays;
 import java.util.List;
@@ -35,7 +36,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Accounts extends TableImpl<AccountsRecord> {
 
-    private static final long serialVersionUID = -1791688274;
+    private static final long serialVersionUID = 523234027;
 
     /**
      * The reference instance of <code>BANKING.ACCOUNTS</code>
@@ -63,7 +64,7 @@ public class Accounts extends TableImpl<AccountsRecord> {
     /**
      * The column <code>BANKING.ACCOUNTS.BALANCE</code>.
      */
-    public final TableField<AccountsRecord, Double> BALANCE = createField("BALANCE", org.jooq.impl.SQLDataType.DOUBLE.nullable(false), this, "");
+    public final TableField<AccountsRecord, BigDecimal> BALANCE = createField("BALANCE", org.jooq.impl.SQLDataType.DECIMAL.precision(65535, 32767).nullable(false), this, "");
 
     /**
      * The column <code>BANKING.ACCOUNTS.OPENING_DATE</code>.

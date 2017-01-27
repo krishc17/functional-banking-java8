@@ -1,7 +1,7 @@
 package io.noorulhaq.functional.banking.domain.test;
 
 
-import static io.noorulhaq.functional.banking.domain.test.model.tables.Accounts.*;
+import static io.noorulhaq.functional.banking.domain.model.jooq.tables.Accounts.*;
 import static io.noorulhaq.functional.banking.domain.model.Accounts.*;
 import static io.noorulhaq.functional.banking.domain.model.Balances.*;
 import static io.noorulhaq.functional.banking.domain.model.Amounts.*;
@@ -12,6 +12,8 @@ import org.joda.time.DateTime;
 import org.jooq.*;
 import org.jooq.impl.DSL;
 import org.junit.Test;
+
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Timestamp;
@@ -20,7 +22,7 @@ import static org.junit.Assert.*;
 /**
  * Created by Noor on 1/22/17.
  */
-public class JooqRepoTest {
+public class JooqTest {
 
     @Test
     public void persistAnRetrieve() throws Exception {
@@ -37,7 +39,7 @@ public class JooqRepoTest {
             ctxt.deleteFrom(ACCOUNTS).execute();
 
             ctxt.insertInto(ACCOUNTS, ACCOUNTS.NO, ACCOUNTS.NAME, ACCOUNTS.BALANCE, ACCOUNTS.OPENING_DATE)
-                    .values("Acc1", "Account One", 100d, new Timestamp(System.currentTimeMillis()))
+                    .values("Acc1", "Account One", new BigDecimal(100d), new Timestamp(System.currentTimeMillis()))
                     .execute();
 
 
