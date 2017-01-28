@@ -32,7 +32,7 @@ public class BankingServiceTest {
                         bankingService.credit(account.get().no(), amount)
                         .apply(shareCalculationService, accountService, shareRepository, accountRepository)
                         .transform((primeAcc)-> Match(primeAcc).of(
-                                Case(Success(Some($())), (acc) ->
+                                Case(Success($()), (acc) ->
                                         accountRepository.query().get()
                                                 .map(a -> a.balance().amount())
                                                 .reduce((a1, a2) -> a1.add(a2))

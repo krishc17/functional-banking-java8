@@ -6,7 +6,6 @@ import io.noorulhaq.functional.banking.domain.algebra.ShareHolderRepository;
 import io.noorulhaq.functional.banking.domain.model.Account;
 import io.noorulhaq.functional.banking.domain.model.Amount;
 import javaslang.Function4;
-import javaslang.control.Option;
 import javaslang.control.Try;
 
 /**
@@ -14,9 +13,9 @@ import javaslang.control.Try;
  */
 public interface BankingServiceInterpreter extends BankingService<Account, Amount> {
 
-    default Function4<ShareCalculationInterpreter, AccountServiceInterpreter, ShareHolderRepository, AccountRepository, Try<Option<Account>>>
+    default Function4<ShareCalculationInterpreter, AccountServiceInterpreter, ShareHolderRepository, AccountRepository, Try<Account>>
     credit(String account_no, Amount amount) {
-        return (Function4<ShareCalculationInterpreter, AccountServiceInterpreter, ShareHolderRepository, AccountRepository, Try<Option<Account>>>)
+        return (Function4<ShareCalculationInterpreter, AccountServiceInterpreter, ShareHolderRepository, AccountRepository, Try<Account>>)
                 (shareCalculationService, accountService, shareRepository, accountRepository) ->
                         shareCalculationService.computeShares(amount).apply(shareRepository)
                                 .flatMap(shareComputation ->

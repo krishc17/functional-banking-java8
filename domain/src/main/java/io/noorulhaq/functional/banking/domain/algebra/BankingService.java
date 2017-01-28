@@ -2,7 +2,6 @@ package io.noorulhaq.functional.banking.domain.algebra;
 
 
 import javaslang.Function4;
-import javaslang.control.Option;
 import javaslang.control.Try;
 
 /**
@@ -10,7 +9,7 @@ import javaslang.control.Try;
  */
 public interface BankingService<Account, Amount> {
 
-    Function4<? extends ShareCalculation,? extends  AccountService, ShareHolderRepository, AccountRepository, Try<Option<Account>>>
+    Function4<? extends ShareCalculation,? extends  AccountService, ShareHolderRepository, AccountRepository, Try<Account>>
     credit(String account_no, Amount amount);
 
 }

@@ -17,7 +17,7 @@ public class Reader<R, A> {
         return reader(r -> f.apply((apply((R)r))));
     }
 
-    public  <B, RD extends Reader<R, B>> RD  flatMap(Function<A, Reader<R, B>> f) {
+    public  <B, RD extends Reader<R, B>> RD  flatMap(Function<A, RD> f) {
         return reader(r -> f.apply(apply(r)).apply(r));
     }
 

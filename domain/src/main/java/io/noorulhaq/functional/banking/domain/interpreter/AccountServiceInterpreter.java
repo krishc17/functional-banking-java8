@@ -33,46 +33,46 @@ public interface AccountServiceInterpreter extends AccountService<Account, Balan
     }
 
     @Override
-    default AccountOperation<Option<Account>> close(String no, Option<DateTime> closeDate) {
+    default AccountOperation<Account> close(String no, Option<DateTime> closeDate) {
         return new AccountOperation<>((repo) -> Match(repo.query(no)).of(
                 Case(Success(None()), () -> Try.failure(new RuntimeException(format("No account found with account number %s.", no)))),
                 Case(Failure($()), ex -> Try.failure(new RuntimeException(format("Unable to close the account %s", no), ex))),
                 Case(Success(Some($())), (acc) -> {
                     if(closeDate.getOrElse(DateTime.now()).isBefore(acc.get().dateOfOpening()))
-                        return Try.<Option<Account>>failure(new RuntimeException(format("Date of closing cannot be before date of opening")));
+                        return Try.<Account>failure(new RuntimeException(format("Date of closing cannot be before date of opening")));
                     else
-                        return repo.store(acc.get().close(closeDate)).flatMap(account -> Try.of(()->Option.of(account)));
+                        return repo.store(acc.get().close(closeDate));
                 })));
     }
 
     @Override
-    default AccountOperation<Option<Account>> debit(String no, Amount amount) {
+    default AccountOperation<Account> debit(String no, Amount amount) {
         return new AccountOperation<>((repo) -> Match(repo.query(no)).of(
                 Case(Success(None()), () -> Try.failure(new RuntimeException(format("No account found with account number %s.", no)))),
                 Case(Failure($()), ex -> Try.failure(new RuntimeException(format("Unable to debit from account %s for %s", no, amount), ex))),
                 Case(Success(Some($())), (acc) -> {
                     if (acc.get().balance().amount().subtract(amount).value() < 0)
-                        return Try.<Option<Account>>failure(new RuntimeException(format("Insufficient account %s balance", no)));
+                        return Try.<Account>failure(new RuntimeException(format("Insufficient account %s balance", no)));
                     else
-                        return repo.store(acc.get().withBalance(Balances.balance(acc.get().balance().amount().subtract(amount)))).map(Option::of);
+                        return repo.store(acc.get().withBalance(Balances.balance(acc.get().balance().amount().subtract(amount))));
                 })
         ));
     }
 
     @Override
-    default AccountOperation<Option<Account>> credit(String no, Amount amount) {
+    default AccountOperation<Account> credit(String no, Amount amount) {
         return new AccountOperation<>((repo) -> Match(repo.query(no)).of(
                 Case(Success(None()), () -> Try.failure(new RuntimeException(format("No account found with account number %s.", no)))),
                 Case(Failure($()), ex -> Try.failure(new RuntimeException(format("Unable to credit on account %s for %s", no, amount), ex))),
-                Case(Success(Some($())), (acc) -> repo.store(acc.get().withBalance(Balances.balance(acc.get().balance().amount().add(amount)))).map(Option::of))));
+                Case(Success(Some($())), (acc) -> repo.store(acc.get().withBalance(Balances.balance(acc.get().balance().amount().add(amount)))))));
     }
 
     @Override
-    default AccountOperation<Option<Balance>> balance(String no) {
+    default AccountOperation<Balance> balance(String no) {
         return new AccountOperation<>((repo) -> Match(repo.query(no)).of(
                 Case(Success(None()), () -> Try.failure(new RuntimeException(format("No account found with account number %s.", no)))),
                 Case(Failure($()), ex -> Try.failure(new RuntimeException(format("Unable to retrieve balance of account %s", no), ex))),
-                Case(Success(Some($())), (acc) -> Try.of( () -> Option.of(acc.get().balance()))
+                Case(Success(Some($())), (acc) -> Try.of( () -> acc.get().balance())
         )));
     }
 }

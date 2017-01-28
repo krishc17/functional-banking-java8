@@ -4,6 +4,7 @@ import io.noorulhaq.functional.banking.domain.algebra.AccountRepository;
 import io.noorulhaq.functional.banking.domain.model.Account;
 import io.noorulhaq.functional.banking.domain.model.Amounts;
 import io.noorulhaq.functional.banking.domain.test.stub.AccountInMemoryRepository;
+import javaslang.Tuple2;
 import javaslang.control.Option;
 import javaslang.control.Try;
 import javaslang.test.Arbitrary;
@@ -37,8 +38,11 @@ public class AccountServiceTest {
                 .suchThat((account, amount) -> accountService.balance(account.get().no())
                         .flatMap((initialBalance) -> accountService.credit(account.get().no(), amount)
                                 .flatMap((creditAccount) -> accountService.debit(account.get().no(), amount)
-                                        .map(debitAccount -> initialBalance.get().get().amount().equals(debitAccount.get().get().balanceAmount()))))
-                        .apply(repository))
+                                        .map(debitAccount -> initialBalance.amount().equals(debitAccount.balanceAmount()))))
+                        .apply(repository)
+                        .transform(result -> Match(result).of(
+                                Case(Success($()), r -> (boolean)r),
+                                Case(Failure($()), (throwable) -> {throwable.printStackTrace(); return false;}))))
                 .check()
                 .assertIsSatisfied();
     }
@@ -55,9 +59,9 @@ public class AccountServiceTest {
                         accountService.credit(debitAccount.get().no(), amount)
                                 .flatMap((a) -> accountService.transfer(debitAccount.get().no(), creditAccount.get().no(), amount)).apply(repository)
                                 .transform((accts)-> Match(accts).of(
-                                        Case(Success(Some($())),
-                                                (accounts) -> accounts.get()._1.balance().amount().equals(Amounts.zero())
-                                                        && accounts.get()._2.balance().amount().equals(amount)),
+                                        Case(Success($()),
+                                                (accounts) -> ((Tuple2<Account,Account>)accounts)._1.balance().amount().equals(Amounts.zero())
+                                                        && ((Tuple2<Account,Account>)accounts)._2.balance().amount().equals(amount)),
                                         Case(Failure($()), (throwable) -> {throwable.printStackTrace(); return false;}))))
                 .check()
                 .assertIsSatisfied();
@@ -66,11 +70,11 @@ public class AccountServiceTest {
 
     @Test
     public void readerComposition(){
-
-       Assert.assertTrue(accountService.open("Acc1","Acc1", Option.none()).apply(repository)
-               .map((acc1) -> accountService.credit("Hox",Amounts.amount(10d))
-                       .flatMap(crdAcc -> accountService.debit(acc1.no(),Amounts.amount(10d)))
-                       .apply(repository)).isSuccess());
+        accountService.open("Acc1","Acc1", Option.none()).apply(repository);
+       Assert.assertTrue(accountService.credit("Acc1",Amounts.amount(10d))
+                    .flatMap(  cAcc -> accountService.debit("Acc1",Amounts.amount(5d))
+                       .flatMap(  dAcc -> accountService.debit("Acc1",Amounts.amount(5d)) ))
+                       .apply(repository).isSuccess());
     }
 
 

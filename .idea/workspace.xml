@@ -2,44 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48ce0261-73bb-4213-a311-851a09600075" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/BankingService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/ShareCalculation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/ShareHolderRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/BankingServiceInterpreter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/ShareCalculationInterpreter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/AccountJooqRepoTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/BankingServiceTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/stub/ShareInMemoryHolderRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/src/main/java/io/noorulhaq/functional/banking/domain/model/ShareComputation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/src/main/java/io/noorulhaq/functional/banking/domain/model/ShareHolder.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/banking.mv.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/domain/banking.mv.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/Repository.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/model/jooq/Banking.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/model/jooq/DefaultCatalog.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/model/jooq/Keys.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/model/jooq/Tables.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/model/jooq/tables/Accounts.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/model/jooq/tables/records/AccountsRecord.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/JooqRepoTest.java" afterPath="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/JooqTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/test/resources/banking.sql" afterPath="$PROJECT_DIR$/model/src/main/resources/banking.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/util/TryReader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/domain.iml" afterPath="$PROJECT_DIR$/domain/domain.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/pom.xml" afterPath="$PROJECT_DIR$/domain/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/AccountRepository.java" afterPath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/AccountRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/AccountOperation.java" afterPath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/AccountOperation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/AccountService.java" afterPath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/AccountService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/AccountJooqRepository.java" afterPath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/AccountJooqRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/BankingService.java" afterPath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/BankingService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/AccountServiceInterpreter.java" afterPath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/AccountServiceInterpreter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/BankingServiceInterpreter.java" afterPath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/BankingServiceInterpreter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/util/Reader.java" afterPath="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/util/Reader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/AccountJooqRepoTest.java" afterPath="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/AccountJooqRepoTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/AccountServiceTest.java" afterPath="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/AccountServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/Generators.java" afterPath="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/Generators.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/stub/AccountInMemoryRepository.java" afterPath="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/stub/AccountInMemoryRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/model.iml" afterPath="$PROJECT_DIR$/model/model.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/pom.xml" afterPath="$PROJECT_DIR$/model/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/src/main/java/io/noorulhaq/functional/banking/domain/model/Account.java" afterPath="$PROJECT_DIR$/model/src/main/java/io/noorulhaq/functional/banking/domain/model/Account.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/src/main/java/io/noorulhaq/functional/banking/domain/model/Amount.java" afterPath="$PROJECT_DIR$/model/src/main/java/io/noorulhaq/functional/banking/domain/model/Amount.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/src/test/java/io/noorulhaq/functional/banking/domain/model/test/ModelTests.java" afterPath="$PROJECT_DIR$/model/src/test/java/io/noorulhaq/functional/banking/domain/model/test/ModelTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/BankingServiceTest.java" afterPath="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/BankingServiceTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,49 +33,38 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="171">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="75">
       <file leaf-file-name="AccountServiceInterpreter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/AccountServiceInterpreter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+            <state relative-caret-position="441">
+              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3091#3108#0" expanded="true" />
+                <element signature="e#2182#2191#0" expanded="true" />
+                <element signature="e#3016#3025#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BankingServiceTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/BankingServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="43" lean-forward="false" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountServiceTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/AccountServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="51" column="35" lean-forward="false" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BankingServiceInterpreter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BankingServiceInterpreter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/BankingServiceInterpreter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShareCalculationInterpreter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/ShareCalculationInterpreter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="96" lean-forward="false" selection-start-line="20" selection-start-column="96" selection-end-line="20" selection-end-column="96" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,9 +75,33 @@
       <file leaf-file-name="AccountRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/AccountRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            <state relative-caret-position="165">
+              <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BankingService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/BankingService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="45" lean-forward="true" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShareCalculation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/ShareCalculation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="58" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,25 +118,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShareCalculationInterpreter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/ShareCalculationInterpreter.java">
+      <file leaf-file-name="AccountJooqRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/AccountJooqRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state relative-caret-position="388">
+              <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BankingService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/BankingService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1482#1483#0" expanded="true" />
+                <element signature="e#1509#1510#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -159,10 +135,28 @@
       <file leaf-file-name="AccountService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/AccountService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+            <state relative-caret-position="375">
+              <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountOperation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/AccountOperation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#356#357#0" expanded="true" />
+                <element signature="e#382#383#0" expanded="true" />
+                <element signature="e#456#457#0" expanded="true" />
+                <element signature="e#510#511#0" expanded="true" />
+                <element signature="e#762#763#0" expanded="true" />
+                <element signature="e#808#809#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -174,8 +168,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SQL Script" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -186,6 +180,7 @@
       <find>bindbind</find>
       <find>Account0</find>
       <find>dropWhile</find>
+      <find>AccountOperation2</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -199,13 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/JooqRepoTests.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/model/test/AccountServiceTests.java" />
-        <option value="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/model/test/JooqRepoTests.java" />
-        <option value="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/model/test/JooqRepoTest.java" />
-        <option value="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/model/test/stub/AccountJooqRepository.java" />
-        <option value="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/model/Generators.java" />
         <option value="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/stub/AccountServiceInterpreter.java" />
         <option value="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/stub/AccountJooqRepository.java" />
         <option value="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/JooqRepoTest.java" />
@@ -236,20 +224,27 @@
         <option value="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/ShareHolderRepository.java" />
         <option value="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/ShareCalculation.java" />
         <option value="$PROJECT_DIR$/model/src/main/java/io/noorulhaq/functional/banking/domain/model/ShareHolder.java" />
-        <option value="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/AccountService.java" />
-        <option value="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/AccountServiceInterpreter.java" />
         <option value="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/AccountRepository.java" />
         <option value="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/stub/AccountInMemoryRepository.java" />
-        <option value="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/AccountJooqRepoTest.java" />
         <option value="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/AccountJooqRepository.java" />
         <option value="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/ModuleCompositionTest.java" />
-        <option value="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/Generators.java" />
         <option value="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/BankingService.java" />
         <option value="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/ShareCalculationInterpreter.java" />
-        <option value="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/BankingServiceTest.java" />
+        <option value="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/AccountOperation2.java" />
+        <option value="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/util/monad/Reader.java" />
+        <option value="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/util/monad/TryReader.java" />
+        <option value="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/util/monad/AccountOperation.java" />
+        <option value="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/util/Reader.java" />
+        <option value="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/util/TryReader.java" />
+        <option value="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/AccountOperation.java" />
+        <option value="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/AccountService.java" />
+        <option value="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/AccountServiceInterpreter.java" />
+        <option value="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/AccountJooqRepoTest.java" />
         <option value="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/AccountServiceTest.java" />
-        <option value="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/BankingServiceInterpreter.java" />
         <option value="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/BankingService.java" />
+        <option value="$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/BankingServiceInterpreter.java" />
+        <option value="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/BankingServiceTest.java" />
+        <option value="$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/Generators.java" />
       </list>
     </option>
   </component>
@@ -482,6 +477,10 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -543,6 +542,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functional-banking-java8" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functional-banking-java8" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
         <option name="show-excluded-files" value="false" />
       </pane>
@@ -580,84 +605,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.BankingServiceTest.credit">
-    <configuration default="false" name="AccountServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="io.noorulhaq.functional.banking.domain.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="domain" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="io.noorulhaq.functional.banking.domain.test" />
-      <option name="MAIN_CLASS_NAME" value="io.noorulhaq.functional.banking.domain.test.AccountServiceTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="BankingServiceTest.composite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="io.noorulhaq.functional.banking.domain.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="domain" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="io.noorulhaq.functional.banking.domain.test" />
-      <option name="MAIN_CLASS_NAME" value="io.noorulhaq.functional.banking.domain.test.BankingServiceTest" />
-      <option name="METHOD_NAME" value="composite" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="BankingServiceTest.testList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="io.noorulhaq.functional.banking.domain.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="domain" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="io.noorulhaq.functional.banking.domain.test" />
-      <option name="MAIN_CLASS_NAME" value="io.noorulhaq.functional.banking.domain.test.BankingServiceTest" />
-      <option name="METHOD_NAME" value="testList" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="AccountServiceTest.readerComposition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -698,6 +645,84 @@
       <option name="MAIN_CLASS_NAME" value="io.noorulhaq.functional.banking.domain.test.BankingServiceTest" />
       <option name="METHOD_NAME" value="credit" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="AccountServiceTest.equalDebitAndCredit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="io.noorulhaq.functional.banking.domain.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="domain" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="io.noorulhaq.functional.banking.domain.test" />
+      <option name="MAIN_CLASS_NAME" value="io.noorulhaq.functional.banking.domain.test.AccountServiceTest" />
+      <option name="METHOD_NAME" value="equalDebitAndCredit" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="AccountServiceTest.balancedLedgerAfterTransfer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="io.noorulhaq.functional.banking.domain.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="domain" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="io.noorulhaq.functional.banking.domain.test" />
+      <option name="MAIN_CLASS_NAME" value="io.noorulhaq.functional.banking.domain.test.AccountServiceTest" />
+      <option name="METHOD_NAME" value="balancedLedgerAfterTransfer" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="AccountServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="io.noorulhaq.functional.banking.domain.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="domain" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="io.noorulhaq.functional.banking.domain.test" />
+      <option name="MAIN_CLASS_NAME" value="io.noorulhaq.functional.banking.domain.test.AccountServiceTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -1042,23 +1067,29 @@
       </MavenSettings>
       <method />
     </configuration>
-    <list size="8">
+    <configuration default="false" name="TryReader.java" type="OdpsQLRunnerConfigurationType" factoryName="MaxCompute SQL">
+      <odps_target_file />
+      <odps_output_dir>/var/folders/mv/rlj57tfx1bb49xy5lhgt68xm0000gn/T/</odps_output_dir>
+      <method />
+    </configuration>
+    <list size="9">
       <item index="0" class="java.lang.String" itemvalue="MaxCompute SQL.AccountService.java" />
       <item index="1" class="java.lang.String" itemvalue="MaxCompute SQL.AccountServiceInterpreter.java" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.AccountServiceTest" />
-      <item index="3" class="java.lang.String" itemvalue="Maven.domain [compile]" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.BankingServiceTest.composite" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.BankingServiceTest.testList" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.AccountServiceTest.readerComposition" />
-      <item index="7" class="java.lang.String" itemvalue="JUnit.BankingServiceTest.credit" />
+      <item index="2" class="java.lang.String" itemvalue="Maven.domain [compile]" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.AccountServiceTest.readerComposition" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BankingServiceTest.credit" />
+      <item index="5" class="java.lang.String" itemvalue="MaxCompute SQL.TryReader.java" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.AccountServiceTest.equalDebitAndCredit" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.AccountServiceTest.balancedLedgerAfterTransfer" />
+      <item index="8" class="java.lang.String" itemvalue="JUnit.AccountServiceTest" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.BankingServiceTest.credit" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BankingServiceTest.composite" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.AccountServiceTest.readerComposition" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BankingServiceTest.testList" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.AccountServiceTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.AccountServiceTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.AccountServiceTest.balancedLedgerAfterTransfer" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.AccountServiceTest.equalDebitAndCredit" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.AccountServiceTest.readerComposition" />
       </list>
     </recent_temporary>
   </component>
@@ -1081,35 +1112,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BankingServiceTest_credit - 2017.01.28 at 01h 27m 52s.xml">
+    <history-entry file="AccountServiceTest - 2017.01.28 at 22h 53m 35s.xml">
+      <configuration name="AccountServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountServiceTest_balancedLedgerAfterTransfer - 2017.01.28 at 22h 53m 27s.xml">
+      <configuration name="AccountServiceTest.balancedLedgerAfterTransfer" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountServiceTest_equalDebitAndCredit - 2017.01.28 at 22h 50m 34s.xml">
+      <configuration name="AccountServiceTest.equalDebitAndCredit" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountServiceTest_equalDebitAndCredit - 2017.01.28 at 22h 51m 30s.xml">
+      <configuration name="AccountServiceTest.equalDebitAndCredit" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountServiceTest_readerComposition - 2017.01.28 at 21h 46m 39s.xml">
+      <configuration name="AccountServiceTest.readerComposition" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountServiceTest_readerComposition - 2017.01.28 at 21h 50m 59s.xml">
+      <configuration name="AccountServiceTest.readerComposition" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountServiceTest_readerComposition - 2017.01.28 at 22h 18m 59s.xml">
+      <configuration name="AccountServiceTest.readerComposition" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountServiceTest_readerComposition - 2017.01.28 at 22h 23m 56s.xml">
+      <configuration name="AccountServiceTest.readerComposition" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BankingServiceTest_credit - 2017.01.28 at 22h 58m 50s.xml">
       <configuration name="BankingServiceTest.credit" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BankingServiceTest_credit - 2017.01.28 at 01h 28m 35s.xml">
+    <history-entry file="BankingServiceTest_credit - 2017.01.28 at 22h 59m 14s.xml">
       <configuration name="BankingServiceTest.credit" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ModuleCompositionTest_composite - 2017.01.28 at 00h 16m 56s.xml">
-      <configuration name="ModuleCompositionTest.composite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ModuleCompositionTest_composite - 2017.01.28 at 00h 18m 10s.xml">
-      <configuration name="ModuleCompositionTest.composite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ModuleCompositionTest_composite - 2017.01.28 at 00h 19m 35s.xml">
-      <configuration name="ModuleCompositionTest.composite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ModuleCompositionTest_composite - 2017.01.28 at 00h 19m 42s.xml">
-      <configuration name="ModuleCompositionTest.composite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ModuleCompositionTest_composite - 2017.01.28 at 00h 20m 28s.xml">
-      <configuration name="ModuleCompositionTest.composite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ModuleCompositionTest_composite - 2017.01.28 at 00h 21m 24s.xml">
-      <configuration name="ModuleCompositionTest.composite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ModuleCompositionTest_composite - 2017.01.28 at 00h 21m 43s.xml">
-      <configuration name="ModuleCompositionTest.composite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ModuleCompositionTest_composite - 2017.01.28 at 00h 21m 57s.xml">
-      <configuration name="ModuleCompositionTest.composite" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -1120,7 +1151,7 @@
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11075612" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11075612" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1129,7 +1160,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="MaxCompute Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10088496" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15575221" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33628318" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1137,9 +1168,9 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24867256" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53539824" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20979765" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32920355" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20442478" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20500532" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="MaxCompute Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920355" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Running Info" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1152,43 +1183,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11075612" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
-      <window_info id="MaxCompute Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12673056" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="MaxCompute Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10088496" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33628318" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24867256" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53539824" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26517573" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
-      <window_info id="MaxCompute Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920355" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Running Info" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Running Result" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -1198,15 +1192,23 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/BankingServiceInterpreter.java</url>
-          <line>16</line>
+          <line>15</line>
           <properties />
           <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/AccountServiceTest.java</url>
+          <line>73</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="58" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="58" />
+      <option name="time" value="62" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1215,56 +1217,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Downloads/highj/branches/java8/src/main/java/org/highj/data/collection/Stream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="122" column="32" lean-forward="false" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/highj/branches/java8/src/main/java/org/highj/data/transformer/IdentityT.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="96" column="27" lean-forward="false" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/highj/branches/java8/src/main/java/org/highj/typeclass1/comonad/Comonad.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/highj/branches/java8/src/main/java/org/highj/data/collection/stream/StreamMonad.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="36" column="42" lean-forward="false" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/src.zip!/java/util/function/Supplier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="40" column="17" lean-forward="false" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/highj/branches/java8/src/test/java/org/highj/data/collection/StreamTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="149" column="56" lean-forward="false" selection-start-line="149" selection-start-column="56" selection-end-line="149" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/highj/branches/java8/src/main/java/org/highj/data/collection/Stream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -1478,14 +1430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/javaslang/javaslang/2.0.5/javaslang-2.0.5.jar!/javaslang/control/Try.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/javaslang/javaslang-test/2.1.0-alpha/javaslang-test-2.1.0-alpha.jar!/javaslang/test/Property.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
@@ -1499,26 +1443,6 @@
         <state relative-caret-position="245">
           <caret line="472" column="24" lean-forward="false" selection-start-line="472" selection-start-column="24" selection-end-line="472" selection-end-column="24" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/AccountOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/util/Reader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="e#702#703#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1544,30 +1468,155 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/AccountJooqRepoTest.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/javaslang/javaslang/2.0.5/javaslang-2.0.5.jar!/javaslang/control/Try.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="-996">
+          <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/AccountJooqRepository.java">
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/AccountOperation2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="20" />
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="31" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/util/monad/Reader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/util/monad/AccountOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/util/monad/TryReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="60" lean-forward="false" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/util/TryReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1482#1483#0" expanded="true" />
-            <element signature="e#1509#1510#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/util/Reader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="e#588#589#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/AccountJooqRepoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="55" lean-forward="false" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/AccountServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-241">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/Generators.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        <state relative-caret-position="570">
+          <caret line="38" column="27" lean-forward="false" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/BankingServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/util/TryReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/AccountOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#456#457#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="e#762#763#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/AccountRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/AccountService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/BankingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="45" lean-forward="true" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1584,37 +1633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/AccountService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/ShareCalculationInterpreter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/AccountServiceInterpreter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3091#3108#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/ShareHolderRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1625,28 +1643,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/AccountRepository.java">
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/AccountJooqRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/AccountServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="51" column="35" lean-forward="false" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
+        <state relative-caret-position="388">
+          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1482#1483#0" expanded="true" />
+            <element signature="e#1509#1510#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/test/java/io/noorulhaq/functional/banking/domain/test/BankingServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/AccountServiceInterpreter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="43" lean-forward="false" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+        <state relative-caret-position="441">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2182#2191#0" expanded="true" />
+            <element signature="e#3016#3025#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/ShareCalculationInterpreter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="96" lean-forward="false" selection-start-line="20" selection-start-column="96" selection-end-line="20" selection-end-column="96" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1655,18 +1679,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/interpreter/BankingServiceInterpreter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/io/noorulhaq/functional/banking/domain/algebra/BankingService.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
