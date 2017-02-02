@@ -1,16 +1,16 @@
 package io.noorulhaq.functional.banking.domain.algebra;
 
-import io.noorulhaq.functional.util.TryReader;
-import javaslang.control.Try;
+import io.noorulhaq.functional.util.FutureReader;
+import javaslang.concurrent.Future;
 import java.util.function.Function;
 
 /**
  * Created by Noor on 1/21/17.
  */
 
-public class AccountOperation<A> extends TryReader<AccountRepository, A> {
+public class AccountOperation<A> extends FutureReader<AccountRepository, A> {
 
-    public AccountOperation(Function<AccountRepository, Try<A>> run) {
+    public AccountOperation(Function<AccountRepository, Future<A>> run) {
         super(run);
     }
 
@@ -20,12 +20,12 @@ public class AccountOperation<A> extends TryReader<AccountRepository, A> {
     }
 
     @Override
-    public <B> AccountOperation<B> flatMap(Function<A, TryReader<AccountRepository, B>> f) {
+    public <B> AccountOperation<B> flatMap(Function<A, FutureReader<AccountRepository, B>> f) {
         return (AccountOperation) super.flatMap(f);
     }
 
     @Override
-    public <B> TryReader<AccountRepository, B> tryReader(Function f) {
+    public <B> FutureReader<AccountRepository, B> futureReader(Function f) {
         return new AccountOperation(f);
     }
 }

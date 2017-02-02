@@ -5,24 +5,28 @@ import io.noorulhaq.functional.banking.domain.algebra.BankingService;
 import io.noorulhaq.functional.banking.domain.algebra.ShareHolderRepository;
 import io.noorulhaq.functional.banking.domain.model.Account;
 import io.noorulhaq.functional.banking.domain.model.Amount;
-import javaslang.Function4;
-import javaslang.control.Try;
+import io.noorulhaq.functional.banking.domain.model.Balance;
+import io.noorulhaq.functional.banking.domain.model.ShareComputation;
+import javaslang.Function2;
+import javaslang.concurrent.Future;
 
 /**
  * Created by Noor on 1/28/17.
  */
-public interface BankingServiceInterpreter extends BankingService<Account, Amount> {
+public interface BankingServiceInterpreter extends BankingService<Account,Balance,Amount,ShareComputation>,
+                                                    AccountServiceInterpreter,
+                                                    ShareCalculationInterpreter {
 
-    default Function4<ShareCalculationInterpreter, AccountServiceInterpreter, ShareHolderRepository, AccountRepository, Try<Account>>
-    credit(String account_no, Amount amount) {
-        return (Function4<ShareCalculationInterpreter, AccountServiceInterpreter, ShareHolderRepository, AccountRepository, Try<Account>>)
-                (shareCalculationService, accountService, shareRepository, accountRepository) ->
-                        shareCalculationService.computeShares(amount).apply(shareRepository)
+    default Function2<ShareHolderRepository, AccountRepository, Future<Account>>
+    creditAcc(String account_no, Amount amount) {
+        return (Function2<ShareHolderRepository, AccountRepository, Future<Account>>)
+                (shareRepository, accountRepository) ->
+                        computeShares(amount).apply(shareRepository)
                                 .flatMap(shareComputation ->
                                         shareComputation.shareHolders()
-                                                .map(shareHolder -> accountService.credit(shareHolder._1.accountNo(), shareHolder._2))
+                                                .map(shareHolder -> credit(shareHolder._1.accountNo(), shareHolder._2))
                                                 .reduce((accountOperation1, accountOperation2) -> accountOperation1.flatMap((shareHolderAcc) -> accountOperation2))
-                                                .flatMap((shareHolderAcc) -> accountService.credit(account_no, amount.subtract(shareComputation.totalCharges())))
+                                                .flatMap((shareHolderAcc) -> credit(account_no, amount.subtract(shareComputation.totalCharges())))
                                                 .apply(accountRepository));
 
     }

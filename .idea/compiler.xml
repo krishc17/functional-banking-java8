@@ -18,6 +18,7 @@
       <module name="functional-banking-java8" target="1.8" />
       <module name="highj" target="1.8" />
       <module name="highj (1)" target="1.8" />
+      <module name="immutable-model" target="1.8" />
       <module name="model" target="1.8" />
     </bytecodeTargetLevel>
   </component>

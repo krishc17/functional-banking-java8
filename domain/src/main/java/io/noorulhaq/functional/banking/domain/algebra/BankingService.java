@@ -1,15 +1,15 @@
 package io.noorulhaq.functional.banking.domain.algebra;
 
 
-import javaslang.Function4;
-import javaslang.control.Try;
+import javaslang.Function2;
+import javaslang.concurrent.Future;
 
 /**
  * Created by Noor on 1/28/17.
  */
-public interface BankingService<Account, Amount> {
+public interface BankingService<Account,Balance, Amount,ShareComputation> extends AccountService<Account, Balance, Amount>, ShareCalculation<ShareComputation,Amount> {
 
-    Function4<? extends ShareCalculation,? extends  AccountService, ShareHolderRepository, AccountRepository, Try<Account>>
-    credit(String account_no, Amount amount);
+    Function2<ShareHolderRepository, AccountRepository, Future<Account>>
+    creditAcc(String account_no, Amount amount);
 
 }

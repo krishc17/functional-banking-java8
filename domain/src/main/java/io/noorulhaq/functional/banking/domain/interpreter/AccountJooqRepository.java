@@ -9,6 +9,7 @@ import static javaslang.Patterns.*;
 import io.noorulhaq.functional.banking.domain.model.jooq.tables.Accounts;
 import io.noorulhaq.functional.banking.domain.model.jooq.tables.records.AccountsRecord;
 import javaslang.collection.List;
+import javaslang.concurrent.Future;
 import javaslang.control.Option;
 import javaslang.control.Try;
 import org.joda.time.DateTime;
@@ -37,24 +38,24 @@ public class AccountJooqRepository extends AccountRepository {
     }
 
     @Override
-    public Try<List<Account>> query() {
+    public Future<List<Account>> query() {
         return null;
     }
 
     @Override
-    public Try<Option<Account>> query(String no) {
-        return openDBConnection(dataSource)
+    public Future<Option<Account>> query(String no) {
+        return  Future.fromTry(openDBConnection(dataSource)
                 .flatMap(ctxt -> fetchAccount(ctxt, no)
-                        .andThen(() -> closeDBConnection(ctxt)));
+                        .andThen(() -> closeDBConnection(ctxt))));
     }
 
     @Override
-    public Try<Account> store(Account account) {
+    public Future<Account> store(Account account) {
 
-        return openDBConnection(dataSource)
+        return Future.fromTry(openDBConnection(dataSource)
                 .flatMap(ctxt -> fetchAccount(ctxt, account.no())
                         .flatMap(acc -> acc.isDefined() ? updateAccount(ctxt, account) : insertAccount(ctxt, account))
-                        .andThen(() -> closeDBConnection(ctxt)));
+                        .andThen(() -> closeDBConnection(ctxt))));
     }
 
     @Override

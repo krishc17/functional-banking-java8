@@ -3,6 +3,7 @@ package io.noorulhaq.functional.banking.domain.test.stub;
 import io.noorulhaq.functional.banking.domain.algebra.ShareHolderRepository;
 import io.noorulhaq.functional.banking.domain.model.ShareHolder;
 import javaslang.collection.List;
+import javaslang.concurrent.Future;
 import javaslang.control.Try;
 import java.util.HashMap;
 import java.util.Map;
@@ -17,13 +18,13 @@ public interface ShareInMemoryHolderRepository extends ShareHolderRepository {
         static Map<String, ShareHolder> shareStore = new HashMap();
     }
 
-    default Try<List<ShareHolder>> query(){
-        return Try.of(() -> List.ofAll(shareStore.values()));
+    default Future<List<ShareHolder>> query(){
+        return Future.of(() -> List.ofAll(shareStore.values()));
     }
 
-    default Try<ShareHolder> store(ShareHolder shareHolder) {
+    default Future<ShareHolder> store(ShareHolder shareHolder) {
 
-        return Try.of(()-> {
+        return Future.of(()-> {
             shareStore.put(shareHolder.accountNo(), shareHolder);
             return  shareStore.get(shareHolder.accountNo());
         });

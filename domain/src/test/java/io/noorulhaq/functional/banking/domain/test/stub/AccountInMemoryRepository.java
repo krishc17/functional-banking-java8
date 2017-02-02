@@ -3,8 +3,8 @@ package io.noorulhaq.functional.banking.domain.test.stub;
 import io.noorulhaq.functional.banking.domain.algebra.AccountRepository;
 import io.noorulhaq.functional.banking.domain.model.Account;
 import javaslang.collection.List;
+import javaslang.concurrent.Future;
 import javaslang.control.Option;
-import javaslang.control.Try;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,17 +16,17 @@ public class AccountInMemoryRepository extends AccountRepository {
 
     private static Map<String, Account> accountStore = new HashMap();
 
-    public Try<List<Account>> query(){
-        return Try.of(() -> List.ofAll(accountStore.values()));
+    public Future<List<Account>> query(){
+        return Future.of(() -> List.ofAll(accountStore.values()));
     }
 
-    public Try<Option<Account>> query(String no) {
-        return Try.of(() -> Option.of(accountStore.get(no)));
+    public Future<Option<Account>> query(String no) {
+        return Future.of(() -> Option.of(accountStore.get(no)));
     }
 
-    public Try<Account> store(Account account) {
+    public Future<Account> store(Account account) {
 
-        return Try.of(()-> {
+        return Future.of(()-> {
             accountStore.put(account.no(), account);
             return  accountStore.get(account.no());
         });

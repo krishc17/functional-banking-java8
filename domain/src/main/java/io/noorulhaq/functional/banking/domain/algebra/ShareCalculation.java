@@ -1,7 +1,7 @@
 package io.noorulhaq.functional.banking.domain.algebra;
 
 import io.noorulhaq.functional.util.Reader;
-import javaslang.control.Try;
+import javaslang.concurrent.Future;
 
 /**
  * Created by Noor on 1/26/17.
@@ -9,6 +9,6 @@ import javaslang.control.Try;
 
 public interface ShareCalculation<ShareComputation,Amount> {
 
-     Reader<ShareHolderRepository, Try<ShareComputation>> computeShares(Amount amount);
+     Reader<ShareHolderRepository, Future<ShareComputation>> computeShares(Amount amount);
 
 }

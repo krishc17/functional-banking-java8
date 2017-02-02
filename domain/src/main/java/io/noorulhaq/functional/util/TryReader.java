@@ -22,7 +22,7 @@ public class TryReader<R, A> {
         return tryReader(r -> apply((R) r).flatMap(a -> f.apply(a).apply((R)r)));
     }
 
-    public <B> TryReader<R, B> mapReader(Function<A, Reader<R, B>> f) {
+    public <B> TryReader<R, B> lift(Function<A, Reader<R, B>> f) {
         return tryReader(r -> apply((R)r).map(a -> f.apply(a).apply((R)r)));
     }
 

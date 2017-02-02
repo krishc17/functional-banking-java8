@@ -23,6 +23,7 @@ public interface AccountService<Account, Balance, Amount> {
 
          return  debit(from,amount)
                 .flatMap(debitAcc -> credit(to,amount)
-                        .map(creditAcc -> Tuple.of(debitAcc,creditAcc)));
+                        .map(creditAcc ->
+                                Tuple.of(debitAcc,creditAcc)));
     }
 }

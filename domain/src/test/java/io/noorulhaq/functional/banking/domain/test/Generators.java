@@ -8,8 +8,8 @@ import io.noorulhaq.functional.banking.domain.model.*;
 import javaslang.Function2;
 import javaslang.Function3;
 import javaslang.Function4;
+import javaslang.concurrent.Future;
 import javaslang.control.Option;
-import javaslang.control.Try;
 import javaslang.test.Arbitrary;
 import javaslang.test.Gen;
 import java.util.Random;
@@ -25,13 +25,13 @@ public interface Generators {
     Arbitrary<Amount> ARBITRARY_AMOUNTS =  Gen.choose(10,1000).map((random)-> Amounts.amount(random.doubleValue())).arbitrary();
 
 
-    Function3<Integer,AccountRepository,AccountServiceInterpreter,Arbitrary<Try<Account>>> ARBITRARY_ACCOUNTS =
+    Function3<Integer,AccountRepository,AccountServiceInterpreter,Arbitrary<Account>> ARBITRARY_ACCOUNTS =
             ((seed,accountRepository, accountServiceInterpreter) ->
                     Gen.of(seed,(last)->last+1).map((id)->  accountServiceInterpreter.open("Account#"+id,"Random Account#"+id, Option.none())
-                            .apply(accountRepository) ).arbitrary());
+                            .apply(accountRepository).get() ).arbitrary());
 
 
-    Function4<Integer,ShareHolderRepository,AccountServiceInterpreter,AccountRepository,Arbitrary<Try<ShareHolder>>> ARBITRARY_SHARES =
+    Function4<Integer,ShareHolderRepository,AccountServiceInterpreter,AccountRepository,Arbitrary<Future<ShareHolder>>> ARBITRARY_SHARES =
             ((seed, shareHolderRepository, accountServiceInterpreter, accountRepository) ->
                 Gen.of(seed,(last)->last+1)
                         .map((id) -> ShareHolder("ShareHolder#"+id, randomDecimal.apply(0.01d,0.1d)))
