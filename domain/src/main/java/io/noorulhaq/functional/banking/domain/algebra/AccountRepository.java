@@ -4,9 +4,6 @@ import io.noorulhaq.functional.banking.domain.model.test.Account;
 import javaslang.control.Option;
 import javaslang.control.Try;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Created by Noor on 1/14/17.
  */

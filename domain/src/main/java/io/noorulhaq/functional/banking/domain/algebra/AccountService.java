@@ -1,6 +1,5 @@
 package io.noorulhaq.functional.banking.domain.algebra;
 
-import io.noorulhaq.functional.util.Reader;
 import javaslang.*;
 import javaslang.control.Option;
 import javaslang.control.Try;
@@ -9,26 +8,22 @@ import org.joda.time.DateTime;
 /**
  * Created by Noor on 1/14/17.
  */
-public abstract class AccountService<Account,Balance,Amount> {
+public interface AccountService<Account,Balance,Amount> {
 
-    public abstract Reader<AccountRepository, Try<Account>> open(String no, String name, Option<DateTime> openDate);
+    Try<Account> open(String no, String name, Option<DateTime> openDate, AccountRepository repository);
 
-    public abstract Reader<AccountRepository, Try<Option<Account>>> close(String no, Option<DateTime> closeDate);
+    Try<Account> close(String no, Option<DateTime> closeDate, AccountRepository repository);
 
-    public abstract Reader<AccountRepository, Try<Option<Account>>> debit(String no, Amount amount);
+    Try<Account> debit(String no, Amount amount, AccountRepository repository);
 
-    public abstract Reader<AccountRepository, Try<Option<Account>>> credit(String no, Amount amount);
+    Try<Account> credit(String no, Amount amount, AccountRepository repository);
 
-    public abstract Reader<AccountRepository, Try<Option<Balance>>> balance(String no);
+    Try<Balance> balance(String no, AccountRepository repository);
 
-    public Reader<AccountRepository, Try<Option<Tuple2<Account, Account>>>> transfer(String from, String to, Amount amount) {
+    default Try<Tuple2<Account, Account>> transfer(String from, String to, Amount amount, AccountRepository repository) {
 
-       return  debit(from,amount)
-                .flatMap(tDebitAcc -> credit(to,amount)
-                        .map(tCreditAcc -> tDebitAcc
-                                .flatMap( oDebitAcc -> tCreditAcc
-                                        .map( oCreditAcc -> oDebitAcc
-                                                .flatMap( debitAcc -> oCreditAcc
-                                                        .map( creditAcc -> Tuple.of(debitAcc,creditAcc)))))));
+       return  debit(from,amount,repository)
+               .flatMap(debitAcc -> credit(to,amount,repository)
+                       .map(creditAcc -> Tuple.of(debitAcc,creditAcc)));
     }
 }

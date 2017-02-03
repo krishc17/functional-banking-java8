@@ -22,8 +22,8 @@ public interface Generators {
 
     Function3<Integer,AccountRepository,AccountServiceInterpreter,Arbitrary<Try<Account>>> ARBITRARY_ACCOUNTS =
             ((seed,accountRepository, accountServiceInterpreter) ->
-                    Gen.of(seed,(last)->last+1).map((id)->  accountServiceInterpreter.open("Account#"+id,"Random Account#"+id, Option.none())
-                            .apply(accountRepository) ).arbitrary());
+                    Gen.of(seed,(last)->last+1).map((id)->  accountServiceInterpreter.open("Account#"+id,"Random Account#"+id, Option.none(),accountRepository))
+                            .arbitrary());
 
 
 

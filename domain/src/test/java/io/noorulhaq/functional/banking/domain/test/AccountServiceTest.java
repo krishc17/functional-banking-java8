@@ -1,10 +1,14 @@
 package io.noorulhaq.functional.banking.domain.test;
 
 
+import io.noorulhaq.functional.banking.domain.algebra.AccountService;
 import io.noorulhaq.functional.banking.domain.interpreter.AccountServiceInterpreter;
 import io.noorulhaq.functional.banking.domain.model.test.Account;
+import io.noorulhaq.functional.banking.domain.model.test.Amount;
 import io.noorulhaq.functional.banking.domain.model.test.Amounts;
+import io.noorulhaq.functional.banking.domain.model.test.Balance;
 import io.noorulhaq.functional.banking.domain.test.stub.AccountInMemoryRepository;
+import javaslang.Tuple2;
 import javaslang.control.Try;
 import javaslang.test.Arbitrary;
 import javaslang.test.Property;
@@ -21,7 +25,9 @@ import static io.noorulhaq.functional.banking.domain.test.Generators.*;
  */
 public class AccountServiceTest {
 
-    private AccountServiceInterpreter accountService = new AccountServiceInterpreter();
+
+    private class AccountService<Account,Balance,Amount> implements AccountServiceInterpreter{}
+    private AccountService<Account,Balance,Amount> accountService = new AccountService();
     private AccountInMemoryRepository repository = new AccountInMemoryRepository();
 
     @Test
@@ -31,11 +37,11 @@ public class AccountServiceTest {
 
         Property.def("Equal credit & debit in sequence retain the same balance")
                 .forAll(ARBITRARY_ACCOUNTS.apply(1000, repository, accountService), ARBITRARY_AMOUNTS)
-                .suchThat((account, amount) -> accountService.balance(account.get().no()).apply(repository)
-                        .flatMap((initialBalance) -> accountService.credit(account.get().no(), amount).apply(repository)
-                                .flatMap((creditAccount) -> accountService.debit(account.get().no(), amount).apply(repository)
+                .suchThat((account, amount) -> accountService.balance(account.get().no(),repository)
+                        .flatMap((initialBalance) -> accountService.credit(account.get().no(), amount,repository)
+                                .flatMap((creditAccount) -> accountService.debit(account.get().no(), amount,repository)
                                         .map((debitAccount) ->
-                                                debitAccount.get().balance().amount().equals(initialBalance.get().amount())))).getOrElse(false))
+                                                debitAccount.balance().amount().equals(initialBalance.amount())))).get())
                 .check()
                 .assertIsSatisfied();
     }
@@ -46,15 +52,15 @@ public class AccountServiceTest {
         Arbitrary<Try<Account>> arbitraryAcc1 = ARBITRARY_ACCOUNTS.apply(1000, repository, accountService);
         Arbitrary<Try<Account>> arbitraryAcc2 = ARBITRARY_ACCOUNTS.apply(2000, repository, accountService);
 
-        Property.def("Ledger should be balanced after amount transfer")
+        Property.def("Ledger should be balanced after account transfer")
                 .forAll(arbitraryAcc1, arbitraryAcc2, ARBITRARY_AMOUNTS)
                 .suchThat((debitAccount, creditAccount, amount) ->
-                        accountService.credit(debitAccount.get().no(), amount)
-                                .flatMap((a) -> accountService.transfer(debitAccount.get().no(), creditAccount.get().no(), amount)).apply(repository)
+                        accountService.credit(debitAccount.get().no(), amount,repository)
+                                .flatMap((a) -> accountService.transfer(debitAccount.get().no(), creditAccount.get().no(), amount,repository))
                                 .transform((accts)-> Match(accts).of(
-                                        Case(Success(Some($())),
-                                                (accounts) -> accounts.get()._1.balance().amount().equals(Amounts.zero())
-                                                        && accounts.get()._2.balance().amount().equals(amount)),
+                                        Case(Success($()),
+                                                (accounts) -> ((Tuple2<Account,Account>)accounts)._1.balance().amount().equals(Amounts.zero())
+                                                        && ((Tuple2<Account,Account>)accounts)._2.balance().amount().equals(amount)),
                                         Case($(), () -> false))))
                 .check()
                 .assertIsSatisfied();
