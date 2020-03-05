@@ -9,7 +9,7 @@
         <module>domain</module>
         <module>model</module>
     </modules>
-    <packaging>pom</packaging>
+    <packaging>pomsss</packaging>
 
     <name>functional-banking</name>
     <url>http://maven.apache.org</url>
